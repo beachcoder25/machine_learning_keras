@@ -42,4 +42,4 @@ import numpy as np
 print(np.argmax(predictions[0]))
 
 plt.imshow(x_test[0])
-plt.show()
+plt.show() #
