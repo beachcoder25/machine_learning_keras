@@ -30,3 +30,16 @@ plt.imshow(x_train[0], cmap = plt.cm.binary)
 plt.show()
 
 print(x_train[0])
+
+model.save('epic_num_reader.model')
+new_model = tf.keras.models.load_model('epic_num_reader.model')
+predictions = new_model.predict(x_test) # Always takes a list
+
+print(predictions)
+
+import numpy as np
+
+print(np.argmax(predictions[0]))
+
+plt.imshow(x_test[0])
+plt.show()
